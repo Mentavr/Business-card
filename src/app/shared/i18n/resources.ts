@@ -180,7 +180,7 @@ export const resources = {
                             point1: 'I completely overhauled the code and became the lead developer. As a result, code maintainability improved by 50%, and it became easier for new team members to integrate.',
                             point2: 'I created an intuitive interface with user-friendly navigation and favorites. Users now spend half as much time finding the advertising campaigns they need.',
                             point3: 'I developed an analytics system with various filters, a calendar, and charts. Clients can independently track trends and optimize their advertising spending.',
-                            point4: '•I set up seamless backend integration. Statistics now update in real time, and key metrics (e.g., total revenue) are calculated automatically. This eliminates errors from manual input and saves up to 10 working hours per week.',
+                            point4: 'I set up seamless backend integration. Statistics now update in real time, and key metrics (e.g., total revenue) are calculated automatically. This eliminates errors from manual input and saves up to 10 working hours per week.',
                         },
                     },
                     UIKit: {
