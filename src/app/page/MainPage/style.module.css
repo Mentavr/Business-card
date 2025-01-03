@@ -1,0 +1,82 @@
+.text {
+    font-size: clamp(40px, 1.626rem + 3.89vw, 120px);
+    color: #000000;
+    margin: 0;
+    -webkit-text-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.39) inset;
+    -moz-text-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.39) inset;
+    text-shadow: calc(var(--move-x) + 4px) calc(var(--move-y) + 2px) 10px white;
+}
+
+.text:hover {
+    color: red;
+    transition: 300ms ease-in-out;
+    transition-property: transform color;
+    transform: scale(1.2);
+}
+
+.mainWrapper {
+    position: relative;
+    height: 300vh;
+    background-color: black;
+    cursor: pointer;
+}
+
+.titleWrapper {
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+
+}
+
+.firstTitle {
+    top: 0;
+    left: clamp(97px, 6.019rem + 0.19vw, 100px);
+    transform: translateY(calc(var(--scrollTop) * 0.2px)) translate3d(var(--move-y), var(--move-x), 0)
+}
+
+.secondTitle {
+    top: 90%;
+    left: clamp(2.5rem, -15.118rem + 78.52vw, 78.125rem);
+    transform: translateY(calc(var(--scrollTop) * -0.2px)) translate3d(var(--move-x), var(--move-y), 0);
+}
+
+.imgWrapperFront {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(max(1, var(--scrollTop) / 100));
+    transition-property: transform;
+    transition-duration: 200ms;
+}
+
+
+
+.imgWrapperBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(calc(10px - var(--scrollBlur)));
+}
+
+.imgSecond {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    max-height: 100vh;
+    transform: translate3d(calc(var(--move-x) / 0.5), calc(var(--move-y) / 0.5), -55px);
+}

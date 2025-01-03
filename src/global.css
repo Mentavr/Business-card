@@ -1,4 +1,7 @@
 @import url('./styles/variables.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   -webkit-font-smoothing: antialiased;
@@ -9,7 +12,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
 }
 
@@ -32,12 +34,12 @@ h1 {
 .container {
   margin: 0 auto;
   padding: 0 1.5rem;
-  max-width: 1110px;
+  max-width: 1400px;
   position: relative;
   box-sizing: content-box;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .container {
       padding: 0 1.5rem;
   }
