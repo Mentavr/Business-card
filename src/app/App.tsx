@@ -1,7 +1,14 @@
-import { MainPage } from "./page/MainPage/MainPage"
-export const App = () =>  {
+import { Outlet } from 'react-router-dom';
+import Layout from './pages/layout/Layout';
+import ScrollToTop from './features/scrollToTop/ScrolllToTop';
 
-  return (
-   <MainPage />
-  )
-}
+const App = () => {
+    return (
+        <Layout>
+            <ScrollToTop />
+            <Outlet />
+        </Layout>
+    );
+};
+
+export default App;

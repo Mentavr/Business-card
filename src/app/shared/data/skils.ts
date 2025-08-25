@@ -1,0 +1,1 @@
+export const stack = ['TypeScript', 'JavaScript', 'Next.js', 'Redux Toolkit', 'React', 'React Router', 'WebSocket', 'HTML', 'CSS', 'TailwindCSS', 'Jest', 'SCSS', 'REST API', 'Storybook', 'React Query']

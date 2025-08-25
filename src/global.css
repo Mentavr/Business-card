@@ -1,4 +1,4 @@
-@import url('./styles/variables.css');
+/* @import url('./styles/variables.css'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,13 +6,54 @@
 :root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --color-main: #0a0a0a;
+  --color-hover-text: rgb(170, 165, 165);
 }
 
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset !important; 
+  -webkit-text-fill-color: #fff !important; 
+  caret-color: #fff !important;             
+  border-radius: 4px !important;                      
+}
+
+input:autofill,
+textarea:autofill,
+select:autofill {
+  box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
+  -moz-text-fill-color: #fff !important;
+  caret-color: #fff !important;
+  border-radius: 4px !important; 
+}
+
+html,
 body {
-  margin: 0;
-  display: flex;
+  overflow-x: hidden;
+}
+
+
+body {
+  min-width: 100vw;
+  background-color: var(--color-main);
   place-items: center;
-  min-height: 100vh;
+  color: #fff;
+  position: relative;
+}
+
+div[id=root] {
+  width: 100%;
+  display: flex;
+  max-width: 1440px;
+  flex-direction: column;
 }
 
 
@@ -22,34 +63,22 @@ li {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a:hover {
+  color: var(--color-hover-text);
 }
 
 
 .container {
   margin: 0 auto;
-  padding: 0 1.5rem;
-  max-width: 1400px;
+  width: 85%;
   position: relative;
-  box-sizing: content-box;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 664px) {
   .container {
-      padding: 0 1.5rem;
-  }
-}
-
-
-@media (max-width: 767px) {
-  .container {
-      padding: 0 1rem;
+    width: 91.4%;
   }
 
 }
-
