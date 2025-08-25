@@ -6,7 +6,6 @@ const Company = () => {
     return (
         <main className="container">
             <Relabs />
-            <Line />
             <ClimbingCompany />
             <Line />
         </main>

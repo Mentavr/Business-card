@@ -31,13 +31,13 @@ const About = () => {
     console.log(pathname);
 
     return (
-        <section className={`t-[4rem] pb-[4rem] tablet:pt-[7.625rem] tablet:pb-[7.625rem] ${pathname === ROUTS.about && 'pt-[0] tablet:pt-[2rem]'}`}>
+        <section className={`${pathname === ROUTS.about ? 'tablet:pt-[2rem]' : 'pt-[64px] pb-[64px] tablet:pt-[122px] tablet:pb-[122px]'}`} >
             <div className="flex flex-col justify-between gap-10 tablet:flex-row  desktop:gap-20 ">
                 <h2 className="text-[3.5625rem]  leading-[90%]   tablet:w-[50%] desktop:text-[5.625rem]">
                     {t('about.title').toUpperCase()}
                 </h2>
                 <div className="flex flex-col gap-[1.5rem] tablet:gap-[1rem] tablet:w-[50%]">
-                    <h3 className="leading-[140%] font-medium text-[1.5rem] tablet:text-[2rem]">
+                    <h3 className="leading-[140%] font-medium text-[24px] tablet:text-[32px]">
                         {t('about.subTitle')}
                     </h3>
                     <p className=" text-gray text-[18px] tablet:text-[]">
@@ -46,13 +46,13 @@ const About = () => {
                     {pathname !== ROUTS.about && (
                         <Link
                             to={ROUTS.about}
-                            className="block w-max mt-[1.5rem] tablet:mt-[2.5rem] uppercase text-yellow hover:text-[orange] border-b-[0.125rem] "
+                            className="block w-max mt-[1.5rem] tablet:mt-[2.5rem] uppercase text-yellow hover:text-[orange] border-b-[2px] "
                         >
                             {t('about.link')}
                         </Link>
                     )}
                     {pathname === ROUTS.about && (
-                        <div className="flex items-center gap-[1rem] mt-[1rem] tablet:mt-[1.5rem]">
+                        <div className="flex items-center gap-[1rem] mt-[16px] tablet:mt-[24px]">
                             <Button
                                 link
                                 isIcon
