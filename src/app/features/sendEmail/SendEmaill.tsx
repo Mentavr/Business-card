@@ -31,6 +31,10 @@ const SendEmail = () => {
         console.log(data);
     
         if (!form.current) return;
+
+        console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID)
+        console.log(import.meta.env.VITE_EMAILJS_TEMPLATE_ID)
+        console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
     
         emailjs.sendForm(
             import.meta.env.VITE_EMAILJS_SERVICE_ID,
