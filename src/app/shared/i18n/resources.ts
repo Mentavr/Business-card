@@ -45,7 +45,7 @@ export const resources = {
                 stack: 'Stack',
             },
             experience: {
-                title: 'Мой опыт',
+                title: 'My experience',
                 firstJobTitle: 'Climbing company',
                 secondJobTitle: 'ReLabs',
                 firstJobDesc:

@@ -6,10 +6,7 @@ const Works = () => {
     const [t] = useTranslation();
 
     return (
-        <section
-            className="pt-[4rem] pb-[4rem] tablet:pt-[7.625rem] tablet:pb-[7.625rem]"
-            id="works"
-        >
+        <section className="pt-[4rem] pb-[4rem] tablet:pt-[7.625rem] tablet:pb-[7.625rem]">
             <div className="flex flex-col justify-between gap-10 tablet:flex-row  desktop:gap-20 ">
                 <h2 className="text-[57px]  leading-[90%]   tablet:w-[50%] desktop:text-[90px]">
                     {t('works.title').toUpperCase()}

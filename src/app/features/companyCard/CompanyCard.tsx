@@ -13,8 +13,7 @@ const CompanyCard = ({companyItems, companyName}:ICompanyCard) => {
 
     return (
         <section
-        className="pt-[4rem] pb-[4rem] tablet:pt-[7.625rem] tablet:pb-[7.625rem]"
-        id="works"
+        className="pb-[4rem] tablet:pt-[2rem] tablet:pb-[7.625rem]"
     >
         <div className="flex flex-col justify-between gap-10 tablet:flex-row  desktop:gap-20 tablet:mb-[130px]">
             <h2 className="text-[57px]  leading-[90%]   tablet:w-[50%] desktop:text-[90px]">
