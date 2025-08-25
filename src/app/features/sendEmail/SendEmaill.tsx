@@ -31,10 +31,6 @@ const SendEmail = () => {
         console.log(data);
     
         if (!form.current) return;
-
-        console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID)
-        console.log(import.meta.env.VITE_EMAILJS_TEMPLATE_ID)
-        console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
     
         emailjs.sendForm(
             import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -61,7 +57,8 @@ const SendEmail = () => {
                 </label>
                 <input
                     id="name"
-                    {...register('name', { required: true })}
+                    {...register('name')}
+                    name='name'
                     type="text"
                     className={`${newInputStyle}`}
                 />
@@ -72,9 +69,10 @@ const SendEmail = () => {
                     {t('form.email')}
                 </label>
                 <input
-                    {...register('email', { required: true })}
+                    {...register('email')}
                     id="email"
                     type="mail"
+                    name='email'
                     className={`${newInputStyle}`}
                 />
                 {<span className="text-[red] text-[12px]">{t(errors.email?.message ?? '')}</span>}
@@ -88,6 +86,7 @@ const SendEmail = () => {
                     id="subject"
                     type="text"
                     className={`${newInputStyle}`}
+                    name='subject'
                 />
                 {<span className="text-[red] text-[12px]">{t(errors.subject?.message ?? '')}</span>}
             </div>
@@ -96,7 +95,8 @@ const SendEmail = () => {
                     {t('form.message')}
                 </label>
                 <textarea
-                    {...register('message', { required: true })}
+                    {...register('message')}
+                    name='message'
                     id="message"
                     className={`${newTextAreaStyle}`}
                 ></textarea>
