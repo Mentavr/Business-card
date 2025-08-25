@@ -31,7 +31,7 @@ const About = () => {
     console.log(pathname);
 
     return (
-        <section className={`${pathname === ROUTS.about ? 'tablet:pt-[2rem]' : 'pt-[64px] pb-[64px] tablet:pt-[122px] tablet:pb-[122px]'}`} >
+        <section className={`pb-[64px] tablet:pt-[122px] ${pathname === ROUTS.about ? 'tablet:pt-[2rem]' : 'pt-[64px] tablet:pb-[122px]'}`} >
             <div className="flex flex-col justify-between gap-10 tablet:flex-row  desktop:gap-20 ">
                 <h2 className="text-[3.5625rem]  leading-[90%]   tablet:w-[50%] desktop:text-[5.625rem]">
                     {t('about.title').toUpperCase()}
