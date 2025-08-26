@@ -1,6 +1,6 @@
 import ArrayIcon from '@/app/shared/svg/ArrayIcon';
 import { forwardRef, useState, MouseEventHandler } from 'react';
-import type { ButtonHTMLAttributes } from 'react';
+import type { ButtonHTMLAttributes, TouchEventHandler } from 'react';
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     isIcon?: boolean;
@@ -20,6 +20,13 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
             setHover(false);
         };
 
+        const touchStart: TouchEventHandler<HTMLButtonElement | HTMLElement> = () => {
+            setHover(true);
+        };
+        const touchEnd: TouchEventHandler<HTMLButtonElement | HTMLElement> = () => {
+            setHover(false);
+        };
+
         const style = `font-bold text-[14px] flex gap-[12px] items-center h-[3rem] p-[0.25rem] pl-[1rem]  duration-200 ease-out rounded-[6.25rem] bg-yellow hover:bg-[orange] text-main   desktop:text-[16px] ${isHover && isIcon ? 'pr-[0.375rem]' : 'pr-[1rem]'}`;
 
         return link ? (
@@ -28,6 +35,8 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
                 className={`${style} ${className} hover:text-main`}
                 onMouseEnter={mouseEnter}
                 onMouseLeave={mouseLeave}
+                onTouchStart={touchStart}
+                onTouchEnd={touchEnd}
                 target={target}
                 rel="noopener noreferrer"
             >

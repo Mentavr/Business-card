@@ -10,6 +10,28 @@ interface IBurgerMenu {
 const BurgerMenu = ({ children, isOpen, setIsOpen }: IBurgerMenu) => {
     const closeIconStyle = 'block w-[2rem] h-[0.125rem] bg-gray duration-300 ease-out';
     const menuRef = useRef<HTMLDivElement>(null);
+    const buttonRef = useRef<HTMLButtonElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                menuRef.current &&
+                !menuRef.current.contains(event.target as Node) &&
+                buttonRef.current &&
+                !buttonRef.current.contains(event.target as Node)
+            ) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isOpen, setIsOpen]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -28,6 +50,7 @@ const BurgerMenu = ({ children, isOpen, setIsOpen }: IBurgerMenu) => {
     return (
         <div>
             <button
+                ref={buttonRef}
                 className={`block w-[1.875rem] h-[1.875rem] flex flex-col justify-center items-center border-[0] tablet:hidden gap-[0.3125rem] ${isOpen ? 'absolute z-[40] top-[1.375rem] right-[1.25rem]' : 'relative'}`}
                 onClick={() => setIsOpen(!isOpen)}
             >
