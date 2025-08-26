@@ -28,8 +28,6 @@ const About = () => {
         setMousePos({ x: -9999, y: -9999 });
     };
 
-    console.log(pathname);
-
     return (
         <section className={`pb-[64px] tablet:pt-[122px] ${pathname === ROUTS.about ? 'tablet:pt-[2rem]' : 'pt-[64px] tablet:pb-[122px]'}`} >
             <div className="flex flex-col justify-between gap-10 tablet:flex-row  desktop:gap-20 ">
