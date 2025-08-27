@@ -1,7 +1,5 @@
-import OneSkill from '@/app/features/oneSkill/oneSkill';
 import { stack } from '@/app/shared/data/skils';
 import { useTranslation } from 'react-i18next';
-import Marquee from 'react-fast-marquee';
 
 const Skills = () => {
     const [t] = useTranslation();

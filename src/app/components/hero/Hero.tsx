@@ -1,5 +1,4 @@
 import SocialLink from '@/app/features/socialLink/SocialLink';
-import { ROUTS } from '@/app/shared/constants';
 import LnIcon from '@/app/shared/svg/LnIcon';
 import TgIcon from '@/app/shared/svg/TgIcon';
 import Button from '@/app/ui/button/Button';
