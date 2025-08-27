@@ -1,6 +1,5 @@
-import { ROUTS, TABLET } from '@/app/shared/constants';
+import { ROUTS } from '@/app/shared/constants';
 import PenIcon from '@/app/shared/svg/PenIcon';
-import { useWindowSize } from '@uidotdev/usehooks';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Popover } from 'react-tiny-popover';
@@ -8,7 +7,6 @@ import { Popover } from 'react-tiny-popover';
 const Contacts = () => {
     const [t] = useTranslation();
     const [isPopoverOpen, setOpen] = useState(false);
-    const { width } = useWindowSize();
 
     const scrollToContacts = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
