@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer
             id="contacts"
-            className="container pt-[4rem] pb-[1.25rem] tablet:pb-[4rem] tablet:pt-[7.625rem] tablet:pb-[7.625rem]"
+            className="container pt-[4rem] pb-[1.25rem] tablet:pb-[4rem] tablet:pt-[7.625rem] tablet:pb-[3.625rem]"
         >
             <div className="flex flex-col justify-around gap-16 tablet:flex-row tablet:gap-10 desktop:gap-20 ">
                 <div className="flex flex-col tablet:w-[50%]">
@@ -21,7 +21,7 @@ const Footer = () => {
                         <a
                             href="mailto:mentarv94@gmail.com"
                             target="_blank"
-                            className="cursor-pointer block w-max border-b-[0.125rem] text-yellow border-yellow hover:text-[orange] hover:border-[orange]"
+                            className="cursor-pointer block w-max border-b-[0.125rem] text-yellow border-yellow desktop:hover:text-[orange] desktop:hover:border-[orange]"
                         >
                             mentarv94@gmail.com
                         </a>
@@ -29,7 +29,7 @@ const Footer = () => {
                     <div className="flex gap-[0.3125rem]  text-[1.125rem] text-gray mb-[2.5rem] flex-wrap">
                         <span>{t('footer.resumeTitle')}</span>
                         <a
-                            className="cursor-pointer block w-max border-b-[0.125rem] text-yellow border-yellow hover:text-[orange] hover:border-[orange]"
+                            className="cursor-pointer block w-max border-b-[0.125rem] text-yellow border-yellow desktop:hover:text-[orange] desktop:hover:border-[orange]"
                             href="/resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"

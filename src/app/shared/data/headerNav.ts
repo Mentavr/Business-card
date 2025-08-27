@@ -3,19 +3,19 @@ import { ROUTS } from "../constants";
 export const headerNav = [
     {
         title: 'header.nav.item1',
-        link: ROUTS.works,
+        link: ROUTS.main,
         positionX: 30,
         positionY: 120,
     },
     {
         title: 'header.nav.item2',
-        link: ROUTS.about,
+        link: ROUTS.works,
         positionX: 35,
         positionY: 165,
     },
     {
         title: 'header.nav.item3',
-        link: '#contacts',
+        link: ROUTS.about,
         positionX: 60,
         positionY: 210,
     },

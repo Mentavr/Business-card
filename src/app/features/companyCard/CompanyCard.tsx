@@ -5,15 +5,16 @@ import { useTranslation } from "react-i18next";
 interface ICompanyCard {
     companyName: string,
     companyItems: CompanyItems[];
+    className?: string;
 }
 
-const CompanyCard = ({companyItems, companyName}:ICompanyCard) => {
+const CompanyCard = ({companyItems, companyName, className}:ICompanyCard) => {
 
     const [t] = useTranslation();
 
     return (
         <section
-        className="pb-[4rem] tablet:pt-[2rem] tablet:pb-[7.625rem]"
+        className={`pb-[4rem] tablet:pt-[2rem] tablet:pb-[7.625rem] ${className}`}
     >
         <div className="flex flex-col justify-between gap-10 tablet:flex-row  desktop:gap-20 tablet:mb-[130px]">
             <h2 className="text-[57px]  leading-[90%]   tablet:w-[50%] desktop:text-[90px]">
@@ -26,8 +27,8 @@ const CompanyCard = ({companyItems, companyName}:ICompanyCard) => {
             </div>
         </div>
         <div className="flex flex-wrap justify-between gap-[30px] desktop:gap-[50px]">
-            {companyItems.map(({title, img, description, works, stack}) => {
-                return <WorkCard name={title} img={img} description={description} works={works} stack={stack}/> 
+            {companyItems.map(({title, img, description, works, stack}, index) => {
+                return <WorkCard key={index} name={title} img={img} description={description} works={works} stack={stack}/> 
             })}
         </div>
     </section>

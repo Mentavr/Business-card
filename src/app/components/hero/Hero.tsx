@@ -1,4 +1,5 @@
 import SocialLink from '@/app/features/socialLink/SocialLink';
+import { ROUTS } from '@/app/shared/constants';
 import LnIcon from '@/app/shared/svg/LnIcon';
 import TgIcon from '@/app/shared/svg/TgIcon';
 import Button from '@/app/ui/button/Button';
@@ -23,18 +24,26 @@ const Hero = () => {
     };
 
     return (
-        <section className="flex flex-col justify-around gap-16 mb-[64px] tablet:flex-row tablet:mb-[5rem] tablet:gap-10 desktop:gap-20 ">
+        <section className="flex flex-col justify-around mt-[74px] tablet:mt-[96px] gap-16 mb-[64px] tablet:flex-row tablet:mb-[5rem] tablet:gap-10 desktop:gap-20 ">
             <div className="tablet:w-[50%] flex flex-col justify-center gap-[2rem] tablet:gap-[2.5rem]">
                 <div className="flex flex-col justify-center gap-[0.9375rem] tablet:gap-[10px]">
                     <h2 className="text-[40px] desktop:text-[80px] leading-[90%]">
-                        {t('hero.title').toUpperCase()}
+                        {t('hero.title')}
                     </h2>
                     <span className="block text-[1rem] tablet:text-[0.875rem] desktop:text-[1.125rem] tablet:text-gray">
                         {t('hero.description')}
                     </span>
                 </div>
                 <div className="flex items-center gap-[1rem]">
-                    <Button link href='#contacts' isIcon>{t('button.hero')}</Button>
+                    <Button
+                        link
+                        isIcon
+                        href="/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {t('hero.resume')}
+                    </Button>
                     <nav className="flex items-center gap-[1rem]">
                         <SocialLink
                             icon={<LnIcon />}
@@ -44,6 +53,12 @@ const Hero = () => {
                         <SocialLink icon={<TgIcon />} type="telegram" value="@ArtemMentavr" />
                     </nav>
                 </div>
+                {/* <a
+                    href={`${ROUTS.contacts}`}
+                    className="block w-max  uppercase text-yellow hover:text-[orange] border-b-[2px] "
+                >
+                    {t('hero.contacts')}
+                </a> */}
             </div>
 
             <div

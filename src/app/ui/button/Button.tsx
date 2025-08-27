@@ -27,7 +27,7 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
             setHover(false);
         };
 
-        const style = `font-bold text-[14px] flex gap-[12px] items-center h-[3rem] p-[0.25rem] pl-[1rem]  duration-200 ease-out rounded-[6.25rem] bg-yellow hover:bg-[orange] text-main   desktop:text-[16px] ${isHover && isIcon ? 'pr-[0.375rem]' : 'pr-[1rem]'}`;
+        const style = `font-bold text-[14px] flex gap-[12px] items-center h-[3rem] p-[0.25rem] pl-[1rem]  duration-200 ease-out rounded-[6.25rem] bg-yellow desktop:hover:bg-[orange]  text-main   desktop:text-[16px] ${isHover && isIcon ? 'pr-[0.375rem] active:bg-[orange]' : 'pr-[1rem]'}`;
 
         return link ? (
             <a
@@ -64,7 +64,7 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
                 {children}
                 {isIcon && (
                     <div
-                        className={`bg-main rounded-[100%] duration-200 ease-out ${isHover ? 'w-[2.5rem] h-[2.5rem]' : 'w-[0.625rem] h-[0.625rem]'} flex justify-center items-center`}
+                        className={`bg-main rounded-[100%] duration-200 ease-out ${isHover ? 'w-[2.5rem] h-[2.5rem] ' : 'w-[0.625rem] h-[0.625rem]'} flex justify-center items-center`}
                     >
                         <ArrayIcon
                             width={isHover ? '13' : '0'}

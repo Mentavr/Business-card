@@ -20,10 +20,10 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset !important; 
-  -webkit-text-fill-color: #fff !important; 
-  caret-color: #fff !important;             
-  border-radius: 4px !important;                      
+  -webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff !important;
+  border-radius: 4px !important;
 }
 
 input:autofill,
@@ -32,7 +32,7 @@ select:autofill {
   box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
   -moz-text-fill-color: #fff !important;
   caret-color: #fff !important;
-  border-radius: 4px !important; 
+  border-radius: 4px !important;
 }
 
 html,
@@ -42,11 +42,11 @@ body {
 
 
 body {
+  overflow-y: scroll;
   min-width: 100vw;
   background-color: var(--color-main);
   place-items: center;
   color: #fff;
-  position: relative;
 }
 
 div[id=root] {
@@ -63,10 +63,6 @@ li {
 
 a {
   text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-hover-text);
 }
 
 

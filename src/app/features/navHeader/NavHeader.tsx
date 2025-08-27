@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useWindowSize } from '@uidotdev/usehooks';
 import { TABLET } from '@/app/shared/constants';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface INavHeader {
     link: string;
@@ -14,24 +14,17 @@ interface INavHeader {
 const NavHeader = ({ link, title, onChange, positionX, positionY }: INavHeader) => {
     const [t] = useTranslation();
     const { width } = useWindowSize();
+    const { pathname } = useLocation();
 
     const textTitle = t(title);
 
-    return link[0] === '#' ? (
-        <a
-            href={link}
-            onClick={() => onChange(false)}
-            className={`${width && width < TABLET ? 'absolute font-medium' : 'relative'}`}
-            style={width && width < TABLET ? { top: positionY, left: positionX } : {}}
-        >
-            {' '}
-            {textTitle}
-        </a>
-    ) : (
+    return (
         <Link
             to={link}
             onClick={() => onChange(false)}
-            className={`${width && width < TABLET ? 'absolute font-medium' : 'relative'}`}
+            className={`text-main' ${width && width < TABLET ? 'absolute font-medium' : 'relative desktop:hover:text-[orange]'} 
+            ${pathname === link && width && width < TABLET && 'text-[gray]'} 
+            ${pathname === link && width && width > TABLET && 'text-yellow'}`}
             style={width && width < TABLET ? { top: positionY, left: positionX } : {}}
         >
             {textTitle}

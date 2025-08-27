@@ -29,10 +29,12 @@ const About = () => {
     };
 
     return (
-        <section className={`pb-[64px] tablet:pt-[122px] ${pathname === ROUTS.about ? 'tablet:pt-[2rem]' : 'pt-[64px] tablet:pb-[122px]'}`} >
+        <section
+            className={`pb-[64px] tablet:pt-[122px] ${pathname === ROUTS.about ? 'tablet:pt-[2rem] mt-[74px] tablet:mt-[96px]' : 'pt-[64px] tablet:pb-[122px]'}`}
+        >
             <div className="flex flex-col justify-between gap-10 tablet:flex-row  desktop:gap-20 ">
                 <h2 className="text-[3.5625rem]  leading-[90%]   tablet:w-[50%] desktop:text-[5.625rem]">
-                    {t('about.title').toUpperCase()}
+                    {t('about.title')}
                 </h2>
                 <div className="flex flex-col gap-[1.5rem] tablet:gap-[1rem] tablet:w-[50%]">
                     <h3 className="leading-[140%] font-medium text-[24px] tablet:text-[32px]">

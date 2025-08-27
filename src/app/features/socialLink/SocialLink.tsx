@@ -48,7 +48,7 @@ const SocialLink = ({ icon, type, value }: ISocialItem) => {
       href={href}
       target={type === "email" || type === "phone" ? "_self" : "_blank"}
       rel="noopener noreferrer"
-      className="block h-[2.5rem] w-[2.5rem] rounded-full bg-light-black flex justify-center items-center hover:bg-main transition-colors duration-200"
+      className="block h-[2.5rem] w-[2.5rem] rounded-full bg-light-black flex justify-center items-center desktop:hover:bg-main transition-colors duration-200"
     >
       {icon}
     </a>

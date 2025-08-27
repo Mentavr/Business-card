@@ -23,8 +23,8 @@ const WorkCard = ({ name, description, works, img, stack }: IWorkCard) => {
                     <p className="text-gray text-[16px] tablet:text-[18px]">{t(description)}</p>
                 </div>
                 <ul className="object-cover flex flex-col gap-[5px] mb-[30px] tablet:gap-[10px] tablet:mb-[50px]">
-                    {works.map((elem) => {
-                        return <li className="list-disc ml-[15px]">{t(elem)}</li>;
+                    {works.map((elem, index) => {
+                        return <li key={index} className="list-disc ml-[15px]">{t(elem)}</li>;
                     })}
                 </ul>
                 <div className="text-yellow flex flex-wrap gap-[5px] desktop:gap-[10px] desktop:mt-[auto]">

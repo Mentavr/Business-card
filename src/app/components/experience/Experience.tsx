@@ -12,7 +12,7 @@ const Experience = () => {
         >
             <div className="flex flex-col justify-between gap-10 tablet:flex-row  desktop:gap-20 ">
                 <h2 className="text-[3.5625rem]  leading-[90%]   tablet:w-[50%] desktop:text-[5.625rem]">
-                    {t('experience.title').toUpperCase()}
+                    {t('experience.title')}
                 </h2>
                 <div className="flex flex-col gap-[2.5rem] tablet:gap-[5rem] tablet:w-[50%]">
                    {experience.map(({title, description, date}) => {

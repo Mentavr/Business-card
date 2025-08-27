@@ -6,6 +6,7 @@ export default {
       screens: {
         tablet: '664px',
         desktop: '1200px',
+        'hoverable': {'raw': '(hover: hover)'},
       },
       colors: {
         main: '#0a0a0a',

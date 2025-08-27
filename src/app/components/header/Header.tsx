@@ -11,31 +11,32 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     return (
-        <header className="w-[91.4%] m-[auto] pt-[1rem] pb-[1rem] tablet:w-[89.1%] tablet:p-[1.5rem] tablet:pr-[0rem] tablet:pl-[0rem] text-gray">
-            <div className="flex justify-between items-center">
-                <h1 className=" text-[1.75rem] tablet:text-[2rem]">
-                    <Link to={ROUTS.main} className="block">
-                        {t('header.name')}
-                    </Link>
-                </h1>
-                <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen}>
-                    <ul className="w-[100% flex tablet:flex-row tablet:gap-[2rem] ">
-                        {headerNav.map(({ title, link, positionX, positionY }) => {
-                            return (
-                                <NavHeader
-                                    key={title}
-                                    title={title}
-                                    link={link}
-                                    onChange={setIsOpen}
-                                    positionX={positionX}
-                                    positionY={positionY}
-                                />
-                            );
-                        })}
-                    </ul>
-                </BurgerMenu>
-            </div>
-        </header>
+        <header className="fixed top-0 left-0 z-10 w-full bg-[rgba(10,10,10,0.6)] backdrop-blur-md">
+        <div className="m-auto max-w-[1440px]">
+          <div className="w-[91.4%] m-auto pt-[8px] pb-[8px] tablet:w-[89.1%] tablet:p-[1rem] tablet:pr-0 tablet:pl-0 text-gray flex justify-between items-center">
+            <h1 className="text-[1.75rem] tablet:text-[2rem]">
+              <Link to={ROUTS.main} className="block hover:desktop:text-[orange]">
+                {t('header.name')}
+              </Link>
+            </h1>
+            <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen}>
+              <ul className="w-full flex tablet:flex-row tablet:gap-[2rem]">
+                {headerNav.map(({ title, link, positionX, positionY }) => (
+                  <NavHeader
+                    key={title}
+                    title={title}
+                    link={link}
+                    onChange={setIsOpen}
+                    positionX={positionX}
+                    positionY={positionY}
+                  />
+                ))}
+              </ul>
+            </BurgerMenu>
+          </div>
+        </div>
+      </header>
+      
     );
 };
 

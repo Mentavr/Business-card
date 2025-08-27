@@ -48,10 +48,10 @@ const BurgerMenu = ({ children, isOpen, setIsOpen }: IBurgerMenu) => {
     }, [isOpen, setIsOpen]);
 
     return (
-        <div>
+        <div className='z-[50]'>
             <button
                 ref={buttonRef}
-                className={`block w-[1.875rem] h-[1.875rem] flex flex-col justify-center items-center border-[0] tablet:hidden gap-[0.3125rem] ${isOpen ? 'absolute z-[40] top-[1.375rem] right-[1.25rem]' : 'relative'}`}
+                className={`block w-[1.875rem] h-[1.875rem] flex flex-col justify-center items-center border-[0] tablet:hidden gap-[0.3125rem]  ${isOpen ? 'absolute z-[40] top-[1.375rem] right-[1.25rem]' : 'relative'}`}
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <span
@@ -65,11 +65,11 @@ const BurgerMenu = ({ children, isOpen, setIsOpen }: IBurgerMenu) => {
             <nav
                 ref={menuRef}
                 className={`flex absolute p-[30px] absolute top-[0] right-[0] w-[300px] h-[300px] duration-300 ease-out
-                 rounded-[100%] bg-yellow text-main text-[15px] flex-col justify-end  shadow-md tablet:translate-x-[0] tablet:translate-y-[0]  tablet:relative
-                tablet:text-gray tablet:text-[1rem] tablet:w-[100%] tablet:h-[100%] tablet:bg-main tablet:flex 
-                tablet:flex-row tablet:shadow-none tablet:p-0 tablet:gap-[30px] z-[30] tablet:overflow-visible ${
+                 rounded-[100%] text-main text-[15px] flex-col justify-end   tablet:translate-x-[0] tablet:translate-y-[0]  tablet:relative
+                tablet:text-gray tablet:text-[1rem] tablet:w-[100%] tablet:h-[100%] tablet:flex 
+                tablet:flex-row tablet:shadow-none tablet:p-0 tablet:gap-[30px] tablet:overflow-visible ${
                     isOpen
-                        ? ' translate-x-[35%] translate-y-[-35%]  overflow-visible'
+                        ? ' translate-x-[35%] translate-y-[-35%] bg-yellow   overflow-visible z-[30]'
                         : ' translate-x-[200%] translate-y-[-200%] overflow-hidden'
                 }`}
             >
