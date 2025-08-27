@@ -17,7 +17,7 @@ const Works = () => {
                     </p>
                     <Link
                         to={ROUTS.works}
-                        className="block w-max  uppercase text-yellow hover:text-[orange] border-b-[2px] "
+                        className="block w-max text-yellow hover:text-[orange] border-b-[2px] "
                     >
                         {' '}
                         {t('works.link')}

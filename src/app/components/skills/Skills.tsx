@@ -1,3 +1,4 @@
+import OneSkill from '@/app/features/oneSkill/oneSkill';
 import { stack } from '@/app/shared/data/skils';
 import { useTranslation } from 'react-i18next';
 
@@ -15,9 +16,9 @@ const Skills = () => {
                         {t('skills.description')}
                     </p>
                     <span className='text-[1.25rem] tablet:text-[1.5625rem]'>{t('skills.stack')}</span>
-                    <div className='flex flex-wrap text-yellow gap-[0.3125rem] text-[1rem] tablet:text-[1.125rem] tablet:gap-[0.5rem] '>
+                    <div className='flex flex-wrap text-yellow gap-[0.3125rem] text-[1rem] tablet:text-[1.125rem] tablet:gap-[0.5rem] mt-[16px] '>
                         {stack.map((elem, index) => {
-                            return <span key={index}>{elem}</span>;
+                            return <OneSkill key={index} text={elem} />
                         })}
                     </div>
                 </div>

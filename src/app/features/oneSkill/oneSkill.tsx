@@ -4,8 +4,8 @@ interface IOneSkill {
 
 const OneSkill = ({ text }: IOneSkill) => {
     return (
-        <div className="flex items-center justify-center p-[24px] pt-[16px] pb-[16px] border-second-gray border-[1px] rounded-[100px] tablet:p-[40px] tablet:pt-[20px] tablet:pb-[20px] w-max">
-            <span className="text-white text-[14px] font-bold tablet:text-[16px]">{text}</span>
+        <div className="flex items-center justify-center p-[12px] pt-[10px] pb-[10px] border-second-gray border-[1px] rounded-[100px] tablet:p-[12px]  w-max">
+            <span className="text-white text-[10px] font-bold tablet:text-[12px]">{text}</span>
         </div>
     );
 };

@@ -46,7 +46,7 @@ const About = () => {
                     {pathname !== ROUTS.about && (
                         <Link
                             to={ROUTS.about}
-                            className="block w-max mt-[1.5rem] tablet:mt-[2.5rem] uppercase text-yellow hover:text-[orange] border-b-[2px] "
+                            className="block w-max mt-[1.5rem] tablet:mt-[2.5rem] text-yellow hover:text-[orange] border-b-[2px] "
                         >
                             {t('about.link')}
                         </Link>
