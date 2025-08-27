@@ -5,4 +5,5 @@ export const ROUTS = {
     about: '/about',
     works: '/works',
     contacts:'#contacts',
+    header: '#header'
 } 

@@ -5,7 +5,7 @@ import Line from '@/app/features/line/Line';
 
 const Main = () => {
     return (
-        <main className="container">
+        <main className="container" id="header">
             <Hero />
             <Line />
             <Works />

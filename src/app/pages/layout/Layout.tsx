@@ -1,6 +1,7 @@
 import Footer from '@/app/components/footer/Footer';
 import Header from '@/app/components/header/Header';
 import Contacts from '@/app/features/contants/Contacts';
+import UpIcon from '@/app/features/upIcon/UpIcon';
 import { ReactNode } from 'react';
 
 interface LayoutProps {
@@ -11,6 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
         <>
             <Header />
             {children}
+            <UpIcon />
             <Contacts />
             <Footer />
         </>

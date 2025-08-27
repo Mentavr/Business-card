@@ -4,7 +4,7 @@ import Line from '@/app/features/line/Line';
 
 const Company = () => {
     return (
-        <main className="container">
+        <main className="container" id="header">
             <Relabs />
             <ClimbingCompany />
             <Line />

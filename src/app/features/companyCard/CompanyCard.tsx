@@ -6,15 +6,17 @@ interface ICompanyCard {
     companyName: string,
     companyItems: CompanyItems[];
     className?: string;
+    id?: string;
 }
 
-const CompanyCard = ({companyItems, companyName, className}:ICompanyCard) => {
+const CompanyCard = ({companyItems, companyName, className, id}:ICompanyCard) => {
 
     const [t] = useTranslation();
 
     return (
         <section
         className={`pb-[4rem] tablet:pt-[2rem] tablet:pb-[7.625rem] ${className}`}
+        id={id}
     >
         <div className="flex flex-col justify-between gap-10 tablet:flex-row  desktop:gap-20 tablet:mb-[130px]">
             <h2 className="text-[57px]  leading-[90%]   tablet:w-[50%] desktop:text-[90px]">
