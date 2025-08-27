@@ -5,7 +5,7 @@ import Experience from '@/app/components/experience/Experience';
 
 const AboutMe = () => {
     return (
-        <main className="container">
+        <main className="container" id="header">
             <About />
             <Line/>
             <Skills />
