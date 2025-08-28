@@ -22,7 +22,7 @@ const UpIcon = () => {
             href={ROUTS.header}
             className="block group w-[40px] h-[40px] rounded-[100%] bg-light-gray cursor-pointer fixed top-[120px] right-[15px] 
   tablet:left-auto tablet:top-auto tablet:bottom-[80px] tablet:right-[20px] 
-  desktop:bottom-[100px] desktop:right-[40px] p-[10px] z-[50]"
+  desktop:bottom-[100px] desktop:right-[40px] p-[10px] z-[5]"
             style={{ opacity, transition: 'opacity 1s ease' }}
         >
             <ArrowUpIcon />

@@ -35,7 +35,7 @@ const Contacts = () => {
                 href={ROUTS.contacts}
                 className="block group w-[40px] h-[40px] rounded-[100%] bg-light-gray cursor-pointer fixed top-[60px] right-[15px] 
           tablet:left-auto tablet:top-auto tablet:bottom-[20px] tablet:right-[20px] 
-          desktop:bottom-[40px] desktop:right-[40px] p-[10px] z-[50]"
+          desktop:bottom-[40px] desktop:right-[40px] p-[10px] z-[5]"
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
             >
