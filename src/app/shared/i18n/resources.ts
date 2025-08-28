@@ -89,7 +89,6 @@ export const resources = {
                             point3: 'Integration with the backend to manage user data and interact with application services.',
                             point4: 'Optimization of UX/UI for proper operation across different web browsers and devices.',
                             point5: 'Creation of a rating system for evaluating partners and increasing user engagement.',
-                            point6: 'Working in a startup environment via a freelance platform: independently managing tasks, communicating with the team, and participating in project decision-making.',
                         },
                     },
                     climbBoard: {
@@ -290,7 +289,6 @@ export const resources = {
                             point3: 'Интеграция с бэкендом для управления пользовательскими данными и взаимодействия с сервисами приложения.',
                             point4: 'Оптимизация UX/UI для корректной работы в разных веб-браузерах и на различных устройствах.',
                             point5: 'Создание рейтинговой системы для оценки партнеров и повышения вовлеченности пользователей.',
-                            point6: 'Работа в стартап-среде через фриланс-платформу: самостоятельное управление задачами, коммуникация с командой и участие в принятии проектных решений.',
                         },
                     },
                     climbBoard: {

@@ -140,7 +140,6 @@ export const climbingCompany = [
             'climbing.projects.peakConnect.works.point3',
             'climbing.projects.peakConnect.works.point4',
             'climbing.projects.peakConnect.works.point5',
-            'climbing.projects.peakConnect.works.point6',
         ],
         stack: [
             'React',
