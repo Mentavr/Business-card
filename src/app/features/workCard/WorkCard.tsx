@@ -25,7 +25,7 @@ const WorkCard = ({ name, description, works, img, stack }: IWorkCard) => {
                     onClick={handleOpen}
                     className="rounded-[12px] bg-light-gray p-[20px] tablet:p-[30px] group cursor-pointer"
                 >
-                    <img src={img} alt="Картинка проекта" className="scale-[1] duration-200 ease-out hover:scale-[0.9]" />
+                    <img src={img} alt="Картинка проекта" className="scale-[1] duration-200 ease-out group-hover:scale-[0.9]" />
                 </div>
                 <Modal
                     className="max-w-full tablet:max-w-[600px] desktop:max-w-[1000px]"
