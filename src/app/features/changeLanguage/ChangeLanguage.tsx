@@ -17,14 +17,14 @@ const ChangeLanguage = () => {
             style={width && width < TABLET ? { top: 245, left: 100 } : {}}
         >
             <button
-                className="w-[30px] h-[30px] tablet:w-[20px] tablet:h-[20px] hover:text-hover-text"
+                className="w-[1.875rem] h-[1.875rem] tablet:w-[1.25rem] tablet:h-[1.25rem] hover:text-hover-text"
                 onClick={() => changeLanguage('en')}
             >
                 EN
             </button>
             <span>/</span>
             <button
-                className="w-[30px] h-[30px] tablet:w-[20px] tablet:h-[20px] hover:text-hover-text"
+                className="w-[1.875rem] h-[1.875rem] tablet:w-[1.25rem] tablet:h-[1.25rem] hover:text-hover-text"
                 onClick={() => changeLanguage('ru')}
             >
                 RU

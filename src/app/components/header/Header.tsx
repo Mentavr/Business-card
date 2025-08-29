@@ -15,7 +15,7 @@ const Header = () => {
             className="fixed top-0 left-0 z-10 w-full bg-[rgba(10,10,10,0.6)] backdrop-blur-md"
         >
             <div className="m-auto max-w-[1440px]">
-                <div className="w-[91.4%] m-auto pt-[8px] pb-[8px] tablet:w-[89.1%] tablet:p-[1rem] tablet:pr-0 tablet:pl-0 text-gray flex justify-between items-center">
+                <div className="w-[91.4%] m-auto pt-[0.5rem] pb-[0.5rem] tablet:w-[89.1%] tablet:p-[1rem] tablet:pr-0 tablet:pl-0 text-gray flex justify-between items-center">
                     <h1 className="text-[1.75rem] tablet:text-[2rem]">
                         <Link to={ROUTS.main} className="block hover:desktop:text-[orange]">
                             {t('header.name')}

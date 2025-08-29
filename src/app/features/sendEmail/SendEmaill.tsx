@@ -46,13 +46,13 @@ const SendEmail = () => {
     
     };
 
-    const newInputStyle = `bg-light-gray h-[46px] rounded-[4px] p-[10px]  tablet:p-[12px] tablet:h-[51px] pt-[16px] pb-[16px]`;
-    const newTextAreaStyle = `bg-light-gray h-[148px] rounded-[4px] p-[10px] tablet:p-[12px] tablet:h-[156px] pt-[16px] pb-[16px]`;
+    const newInputStyle = `bg-light-gray h-[2.875rem] rounded-[0.25rem] p-[0.625rem]  tablet:p-[0.75rem] tablet:h-[3.1875rem] pt-[1rem] pb-[1rem]`;
+    const newTextAreaStyle = `bg-light-gray h-[9.25rem] rounded-[0.25rem] p-[0.625rem] tablet:p-[0.75rem] tablet:h-[9.75rem] pt-[1rem] pb-[1rem]`;
 
     return (
-        <form ref={form} onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-[24px]">
-            <div className="flex flex-col gap-[8px] tablet:gap-[10px]">
-                <label htmlFor="name" className="text-[1rem] text-gray">
+        <form ref={form} onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-[1.5rem]">
+            <div className="flex flex-col gap-[0.5rem] tablet:gap-[0.625rem]">
+                <label htmlFor="name" className="text-[16px] text-gray">
                     {t('form.name')}
                 </label>
                 <input
@@ -62,10 +62,10 @@ const SendEmail = () => {
                     type="text"
                     className={`${newInputStyle}`}
                 />
-                {<span className="text-[red] text-[12px]">{t(errors?.name?.message ?? '')}</span>}
+                {<span className="text-[red] text-[0.75rem]">{t(errors?.name?.message ?? '')}</span>}
             </div>
-            <div className="flex flex-col gap-[8px] tablet:gap-[10px]">
-                <label htmlFor="email" className="text-[1rem] text-gray">
+            <div className="flex flex-col gap-[0.5rem] tablet:gap-[0.625rem]">
+                <label htmlFor="email" className="text-[16px] text-gray">
                     {t('form.email')}
                 </label>
                 <input
@@ -75,10 +75,10 @@ const SendEmail = () => {
                     name='email'
                     className={`${newInputStyle}`}
                 />
-                {<span className="text-[red] text-[12px]">{t(errors.email?.message ?? '')}</span>}
+                {<span className="text-[red] text-[0.75rem]">{t(errors.email?.message ?? '')}</span>}
             </div>
-            <div className="flex flex-col gap-[8px] tablet:gap-[10px]">
-                <label htmlFor="subject" className="text-[1rem] text-gray">
+            <div className="flex flex-col gap-[0.5rem] tablet:gap-[0.625rem]">
+                <label htmlFor="subject" className="text-[16px] text-gray">
                     {t('form.subject')}
                 </label>
                 <input
@@ -88,10 +88,10 @@ const SendEmail = () => {
                     className={`${newInputStyle}`}
                     name='subject'
                 />
-                {<span className="text-[red] text-[12px]">{t(errors.subject?.message ?? '')}</span>}
+                {<span className="text-[red] text-[0.75rem]">{t(errors.subject?.message ?? '')}</span>}
             </div>
-            <div className="flex flex-col gap-[8px] tablet:gap-[10px]">
-                <label htmlFor="message" className="text-[1rem] text-gray">
+            <div className="flex flex-col gap-[0.5rem] tablet:gap-[0.625rem]">
+                <label htmlFor="message" className="text-[16px] text-gray">
                     {t('form.message')}
                 </label>
                 <textarea
@@ -100,7 +100,7 @@ const SendEmail = () => {
                     id="message"
                     className={`${newTextAreaStyle}`}
                 ></textarea>
-                {<span className="text-[red] text-[12px]">{t(errors.message?.message ?? '')}</span>}
+                {<span className="text-[red] text-[0.75rem]">{t(errors.message?.message ?? '')}</span>}
             </div>
             <Button className="w-max" type="submit">
                 {t('button.footer')}

@@ -23,12 +23,12 @@ const WorkCard = ({ name, description, works, img, stack }: IWorkCard) => {
             <div className="desktop:w-[50%]">
                 <div
                     onClick={handleOpen}
-                    className="rounded-[12px] bg-light-gray p-[20px] tablet:p-[30px] group cursor-pointer"
+                    className="rounded-[0.75rem] bg-light-gray p-[1.25rem] tablet:p-[1.875rem] group cursor-pointer"
                 >
                     <img src={img} alt="Картинка проекта" className="scale-[1] duration-200 ease-out group-hover:scale-[0.9]" />
                 </div>
                 <Modal
-                    className="max-w-full tablet:max-w-[600px] desktop:max-w-[1000px]"
+                    className="max-w-full tablet:max-w-[37.5rem] desktop:max-w-[62.5rem]"
                     size="custom"
                     isOpen={isOpen}
                     setOpen={setOpen}
@@ -36,25 +36,25 @@ const WorkCard = ({ name, description, works, img, stack }: IWorkCard) => {
                     <img
                         src={img}
                         alt="Картинка проекта"
-                        className="object-cover  rounded-[30px] max-h-[660px]"
+                        className="object-cover  rounded-[1.875rem] max-h-[41.25rem]"
                     />
                 </Modal>
             </div>
             <div className="desktop:w-[50%] flex flex-col">
-                <div className="mb-[24px] tablet:mb-[32px]">
-                    <h3 className="font-medium text-[24px] tablet:text-[32px]">{t(name)}</h3>
-                    <p className="text-gray text-[16px] tablet:text-[18px]">{t(description)}</p>
+                <div className="mb-[1.5rem] tablet:mb-[2rem]">
+                    <h3 className="font-medium text-[1.5rem] tablet:text-[2rem]">{t(name)}</h3>
+                    <p className="text-gray text-[1rem] tablet:text-[1.125rem]">{t(description)}</p>
                 </div>
-                <ul className="object-cover flex flex-col gap-[5px] mb-[30px] tablet:gap-[10px] tablet:mb-[50px]">
+                <ul className="object-cover flex flex-col gap-[0.3125rem] mb-[1.875rem] tablet:gap-[0.625rem] tablet:mb-[3.125rem]">
                     {works.map((elem, index) => {
                         return (
-                            <li key={index} className="list-disc ml-[15px]">
+                            <li key={index} className="list-disc ml-[0.9375rem]">
                                 {t(elem)}
                             </li>
                         );
                     })}
                 </ul>
-                <div className="text-yellow flex flex-wrap gap-[5px] desktop:gap-[10px] desktop:mt-[auto]">
+                <div className="text-yellow flex flex-wrap gap-[0.3125rem] desktop:gap-[0.625rem] desktop:mt-[auto]">
                     {stack.map((elem, index) => {
                         return <OneSkill key={index} text={elem} />;
                     })}

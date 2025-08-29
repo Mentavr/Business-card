@@ -1,7 +1,6 @@
 import SendEmail from '@/app/features/sendEmail/SendEmaill';
 import SocialLink from '@/app/features/socialLink/SocialLink';
-import LnIcon from '@/app/shared/svg/LnIcon';
-import TgIcon from '@/app/shared/svg/TgIcon';
+import socials from '@/app/shared/data/socials';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -13,7 +12,7 @@ const Footer = () => {
         >
             <div className="flex flex-col justify-around gap-16 tablet:flex-row tablet:gap-10 desktop:gap-20 ">
                 <div className="flex flex-col tablet:w-[50%]">
-                    <h2 className="text-[3.5625rem]  leading-[90%]  desktop:text-[5.625rem] mb-[16px]">
+                    <h2 className="text-[3.5625rem]  leading-[90%]  desktop:text-[5.625rem] mb-[1rem]">
                         {t('footer.title')}
                     </h2>
                     <div className="flex gap-[0.3125rem] text-[1.125rem] text-gray flex-wrap mb-[1.25rem]">
@@ -38,12 +37,9 @@ const Footer = () => {
                         </a>
                     </div>
                     <nav className="flex items-center gap-[1rem]">
-                        <SocialLink
-                            icon={<LnIcon />}
-                            type="linkedin"
-                            value="/артем-быков-054449224/"
-                        />
-                        <SocialLink icon={<TgIcon />} type="telegram" value="@ArtemMentavr" />
+                        {socials.map(({ icon, type, value, id }) => {
+                            return <SocialLink key={id} icon={icon} type={type} value={value} />;
+                        })}
                     </nav>
                 </div>
                 <div className="tablet:w-[50%]">

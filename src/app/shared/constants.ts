@@ -7,3 +7,5 @@ export const ROUTS = {
     contacts:'#contacts',
     header: '#header'
 } 
+
+export const RADIUS_XRAY = 200;

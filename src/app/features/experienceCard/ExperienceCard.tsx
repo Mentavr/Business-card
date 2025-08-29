@@ -10,12 +10,12 @@ const ExperienceCard = ({ title, date, description }: IExperienceCard) => {
     const [t] = useTranslation();
 
     return (
-        <div className="flex flex-col gap-[12px] tablet:gap-[16px]">
-            <div className="flex flex-col justify-between gap-[4px] tablet:gap-[0] tablet:flex-row">
-                <h3 className="font-medium text-[18px] tablet:text-[24px]">{t(title)}</h3>
-                <span className="text-gray text-[16px] tablet:text-[18px]">{t(date)}</span>
+        <div className="flex flex-col gap-[0.75rem] tablet:gap-[1rem]">
+            <div className="flex flex-col justify-between gap-[0.25rem] tablet:gap-[0] tablet:flex-row">
+                <h3 className="font-medium text-[1.125rem] tablet:text-[1.5rem]">{t(title)}</h3>
+                <span className="text-gray text-[1rem] tablet:text-[1.125rem]">{t(date)}</span>
             </div>
-            <p className="text-gray text-[16px] tablet:text-[18px]">{t(description)}</p>
+            <p className="text-gray text-[1rem] tablet:text-[1.125rem]">{t(description)}</p>
         </div>
     );
 };

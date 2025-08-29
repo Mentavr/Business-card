@@ -1,16 +1,10 @@
 import { ROUTS } from '@/app/shared/constants';
+import scrollTo from '@/app/shared/helpers/scrollTo';
 import { useDocumentHeight } from '@/app/shared/hooks/useDocumentHeight';
 import ArrowUpIcon from '@/app/shared/svg/ArrowUpIcon';
 import { useWindowScroll } from '@uidotdev/usehooks';
 
 const UpIcon = () => {
-    const scrollToContacts = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        const target = document.querySelector(ROUTS.header);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
     const [scroll] = useWindowScroll();
     const height = useDocumentHeight();
     const progress = scroll ? scroll.y : 0 / (height - window.innerHeight);
@@ -18,11 +12,11 @@ const UpIcon = () => {
 
     return (
         <a
-            onClick={scrollToContacts}
+            onClick={(e) => scrollTo(e, ROUTS.header)}
             href={ROUTS.header}
-            className="block group w-[40px] h-[40px] rounded-[100%] bg-light-gray cursor-pointer fixed top-[120px] right-[15px] 
-  tablet:left-auto tablet:top-auto tablet:bottom-[80px] tablet:right-[20px] 
-  desktop:bottom-[100px] desktop:right-[40px] p-[10px] z-[5]"
+            className="block group w-[2.5rem] h-[2.5rem] rounded-[100%] bg-light-gray cursor-pointer fixed top-[7.5rem] right-[0.9375rem] 
+  tablet:left-auto tablet:top-auto tablet:bottom-[5rem] tablet:right-[1.25rem] 
+  desktop:bottom-[6.25rem] desktop:right-[2.5rem] p-[0.625rem] z-[5]"
             style={{ opacity, transition: 'opacity 1s ease' }}
         >
             <ArrowUpIcon />

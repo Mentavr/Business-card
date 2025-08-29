@@ -16,7 +16,7 @@ const Skills = () => {
                         {t('skills.description')}
                     </p>
                     <span className='text-[1.25rem] tablet:text-[1.5625rem]'>{t('skills.stack')}</span>
-                    <div className='flex flex-wrap text-yellow gap-[0.3125rem] text-[1rem] tablet:text-[1.125rem] tablet:gap-[0.5rem] mt-[16px] '>
+                    <div className='flex flex-wrap text-yellow gap-[0.3125rem] text-[1rem] tablet:text-[1.125rem] tablet:gap-[0.5rem] mt-[1rem] '>
                         {stack.map((elem, index) => {
                             return <OneSkill key={index} text={elem} />
                         })}

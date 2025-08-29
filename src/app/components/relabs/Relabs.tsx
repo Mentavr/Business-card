@@ -4,7 +4,7 @@ import { relabs } from '@/app/shared/data/works';
 const Relabs = () => {
     return (
         <CompanyCard
-            className="mt-[74px] tablet:mt-[96px]"
+            className="mt-[4.625rem] tablet:mt-[6rem]"
             companyName="relabs"
             companyItems={relabs}
         />
