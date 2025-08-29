@@ -9,3 +9,5 @@ export const ROUTS = {
 } 
 
 export const RADIUS_XRAY = 200;
+
+export const HALF_WINDOW = 1.5;

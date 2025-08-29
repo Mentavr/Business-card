@@ -1,14 +1,13 @@
-import { ROUTS } from '@/app/shared/constants';
+import { HALF_WINDOW, ROUTS } from '@/app/shared/constants';
 import scrollTo from '@/app/shared/helpers/scrollTo';
-import { useDocumentHeight } from '@/app/shared/hooks/useDocumentHeight';
 import ArrowUpIcon from '@/app/shared/svg/ArrowUpIcon';
 import { useWindowScroll } from '@uidotdev/usehooks';
 
 const UpIcon = () => {
     const [scroll] = useWindowScroll();
-    const height = useDocumentHeight();
-    const progress = scroll ? scroll.y : 0 / (height - window.innerHeight);
-    const opacity = Math.min(Math.max(progress ?? 0, 0), 1);
+    const y = scroll?.y ?? 0;
+    const progress = y >= (window.innerHeight / HALF_WINDOW);
+    const opacity = progress ? 1 : 0;
 
     return (
         <a
