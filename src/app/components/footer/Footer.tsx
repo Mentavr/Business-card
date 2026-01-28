@@ -1,6 +1,7 @@
 import SendEmail from '@/app/features/sendEmail/SendEmaill';
 import SocialLink from '@/app/features/socialLink/SocialLink';
 import socials from '@/app/shared/data/socials';
+import i18n from '@/app/shared/i18n/i18n';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -29,7 +30,7 @@ const Footer = () => {
                         <span>{t('footer.resumeTitle')}</span>
                         <a
                             className="cursor-pointer block w-max border-b-[0.125rem] text-yellow border-yellow desktop:hover:text-[orange] desktop:hover:border-[orange]"
-                            href="/resume.pdf"
+                            href={i18n.language === 'en' ? "/ResumeEn.pdf" : "/ResumeRu.pdf"}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
